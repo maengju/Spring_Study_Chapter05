@@ -17,6 +17,7 @@ import user.dao.UserDAOMybatis;
 import user.main.HelloSpring;
 import user.service.UserDeleteService;
 import user.service.UserInsertService;
+import user.service.UserSearchService;
 import user.service.UserSelectService;
 import user.service.UserUpdateService;
 
@@ -98,6 +99,11 @@ public class SpringConfigrantion {
 	@Bean
 	public UserDeleteService userDeleteService() {
 		return new UserDeleteService();
+	}
+	
+	@Bean
+	public UserSearchService userSearchService() {
+		return new UserSearchService();
 	}
 	
 	@Bean

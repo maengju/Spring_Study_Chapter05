@@ -16,4 +16,6 @@ public interface UserDAO {
 
 	public void delete(String id);
 
+	public List<UserDTO> search(UserDTO userDTO);
+
 }

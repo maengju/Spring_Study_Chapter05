@@ -23,4 +23,16 @@
  	<delete id="delete" parameterType="String">
  		delete usertable where id=#{id}
  	</delete>
+ 	
+ 	<select id="search"  parameterType="userDTO" resultType="userDTO">
+            select * from usertable where
+ 			<if test="name != null">
+ 			name like '%' ||  #{name} || '%'
+ 			</if>
+ 		
+ 			<if test="id != null">
+ 			 id like '%' ||  #{id} || '%'
+ 			</if>
+ 	</select>
+ 	
  </mapper>
